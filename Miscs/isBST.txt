@@ -1,0 +1,27 @@
+#include "All.h"
+
+bool isBST(Node* subtree , int min , int max)
+{
+	if(subtree==NULL)return;
+	if(subtree->data >min && subtree->data<max)
+		return false;	
+	if(!isBST(subtree->left , min , subtree->data))
+		return false;
+	if(!isBST(subtree->right ,subtree->data , max))
+		return false;
+	return true;
+
+}
+bool isBST()
+{
+	return isBST(root, ~0 , (~0)>>1 );	
+}
+
+
+
+int main()
+{
+
+
+
+}

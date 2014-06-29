@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Sorting">
+      <UniqueIdentifier>{72ee748e-223b-471d-a5d0-9ce0393c89d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LinkedLists">
+      <UniqueIdentifier>{f3d17b7d-4209-483e-a023-a6c610fdaa54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Stack">
+      <UniqueIdentifier>{f0c890d9-4f97-4546-aae8-8af407c46204}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Stack\StackProblems">
+      <UniqueIdentifier>{e524d82a-5992-43a4-9bfe-1a7413524641}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Trees">
+      <UniqueIdentifier>{e762947b-2118-42a8-8536-991824869cd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Misc">
+      <UniqueIdentifier>{0344fc74-f73a-4798-a635-b891c72015b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Heap">
+      <UniqueIdentifier>{468baf81-115c-4d1f-843b-d232942bb044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\HashTable">
+      <UniqueIdentifier>{81e98e02-631c-45d7-bc4b-5b243f39b9ce}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MergeSort.cpp">
+      <Filter>Source Files\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="CountSort.cpp">
+      <Filter>Source Files\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectionSort.cpp">
+      <Filter>Source Files\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="BubbleSort.cpp">
+      <Filter>Source Files\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="QuickSort.cpp">
+      <Filter>Source Files\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="InsertionSort.cpp">
+      <Filter>Source Files\Sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleLinkedList.h">
+      <Filter>Source Files\LinkedLists</Filter>
+    </ClCompile>
+    <ClCompile Include="ListTestingPlayground.cpp">
+      <Filter>Source Files\LinkedLists</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerOfHanoi.cpp">
+      <Filter>Source Files\Stack\StackProblems</Filter>
+    </ClCompile>
+    <ClCompile Include="StackPlayground.cpp">
+      <Filter>Source Files\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="MyQueue.cpp">
+      <Filter>Source Files\Stack\StackProblems</Filter>
+    </ClCompile>
+    <ClCompile Include="StackSort.cpp">
+      <Filter>Source Files\Stack\StackProblems</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeTestingPlayground.cpp">
+      <Filter>Source Files\Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="AnagramSort.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="detectCycleBegin.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="binarySearchOnCycleShift.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="mergeInPlace.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="FindValInMatrix.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="UnorderedMap.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="findMinNeededRange.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="numToAlphabet.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="binaryTreeToLinkedList.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="HeapPlayground.cpp">
+      <Filter>Source Files\Heap</Filter>
+    </ClCompile>
+    <ClCompile Include="HeapSort.cpp">
+      <Filter>Source Files\Heap</Filter>
+    </ClCompile>
+    <ClCompile Include="SumOrEqualK.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="belowN.cpp">
+      <Filter>Source Files\Misc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="All.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stack.h">
+      <Filter>Source Files\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="BST.h">
+      <Filter>Source Files\Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="heap.h">
+      <Filter>Source Files\Heap</Filter>
+    </ClInclude>
+    <ClInclude Include="HashTable.h">
+      <Filter>Source Files\HashTable</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

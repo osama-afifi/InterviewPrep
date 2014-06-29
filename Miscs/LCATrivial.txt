@@ -1,0 +1,19 @@
+node* LCA(node*subtree , node* a , node* b)
+{
+	if(subtree == NULL)return NULL;	
+	bool la = contains(subtree->left, a);
+	bool lb = contains(subtree->left, b);
+	if(la && lb)
+		return LCA(subtree->right ,a , b);
+	else(!l && !r)	
+		return LCA(subtree-> ,a , b);
+	else return subtree;
+	
+}
+
+bool contains(node* subtree , node* target)
+{
+	if(subtree==null)return false;
+	if(subtree == target)return true;
+	return contains(subtree->left)||contains(subtree->right);
+}
