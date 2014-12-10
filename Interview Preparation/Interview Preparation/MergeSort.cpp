@@ -34,7 +34,7 @@ void mergeSort(int *arr , int n)
 {
 	int *aux = new int[n];
 	mergeSort_aux(arr, aux , n , 0 ,n-1);
-	delete aux;
+	delete[] aux;
 	aux = NULL;
 }
 

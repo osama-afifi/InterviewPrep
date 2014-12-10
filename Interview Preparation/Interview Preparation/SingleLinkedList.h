@@ -24,22 +24,7 @@ private:
 
 public:
 
-	// delete a Node where we already point at it
-	void deleteNode(ListNode<T>*deleted)
-	{
-		assert(deleted!=NULL);
-		length--;	
-		if(deleted->next==tail)
-		{
-			tail = deleted;
-			return;
-		}
-		deleted->data = deleted->next->data;
-		ListNode<T> *temp = deleted->next;
-		deleted->next = deleted->next->next;
-		delete temp;
-		temp = NULL;
-	}
+
 
 	SingleLinkedList()
 	{
@@ -48,12 +33,13 @@ public:
 		tail = new ListNode<T>(-1);
 		head->next  = tail;
 	}
-	//~SingleLinkedList()
-	//{
-	//	clear();
-	//	delete head;
-	//	delete tail;
-	//}
+	~SingleLinkedList()
+	{
+		clear();
+		delete head;
+		delete tail;
+		head = tail = NULL;
+	}
 
 	int Length()
 	{
@@ -86,12 +72,31 @@ public:
 				cur->next = cur->next->next;	
 				delete deleted;
 				deleted = null;
-				break;
+				//break;  // for one deletion only
 			}
-			cur  = cur->next;
+			else
+				cur  = cur->next;
 		}
 		--length;
 		if(length==0)head==NULL;
+	}
+
+		// delete a Node where we already point at it
+	void deleteNode(ListNode<T>*deleted)
+	{
+		assert(deleted!=NULL);
+		length--;	
+		if(deleted->next==tail)
+		{
+			delete tail;
+			tail = deleted;
+			return;
+		}
+		deleted->data = deleted->next->data;
+		ListNode<T> *temp = deleted->next;
+		deleted->next = deleted->next->next;
+		delete temp;
+		temp = NULL;
 	}
 
 	void append(T val)

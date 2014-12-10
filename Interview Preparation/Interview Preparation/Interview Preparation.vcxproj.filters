@@ -117,6 +117,9 @@
     <ClCompile Include="belowN.cpp">
       <Filter>Source Files\Misc</Filter>
     </ClCompile>
+    <ClCompile Include="HashTable2014.h">
+      <Filter>Source Files\HashTable</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="All.h">
