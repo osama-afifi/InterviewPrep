@@ -1,0 +1,39 @@
+int path[];
+
+void print(int level  ,int sum)
+{
+	while(sum<0 && level>=0)
+		{
+		cout<< path->data << " ";
+		sum-=path[level--]->data;
+		}	
+	cout<<endl;
+
+}
+void printPathsHelper(node* curNode , int level , int &target)
+{
+	if(curNode==NULL)return;
+		
+		path[level]=curNode->data;
+		
+		int l = level;
+		int curSum=0;
+		while(l && sum <=target)
+		{
+		sum+=path[l];
+		if(sum==target)
+		print(level,sum);
+
+		}
+
+		printPathsHelper(curNode->left  , level+1, target);	
+		printPathsHelper(curNode->right , level+1, target);	
+
+}
+
+void printPaths(int target)
+{
+
+printPathsHelper(root , 0 , target);
+
+}
