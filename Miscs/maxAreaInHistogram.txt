@@ -1,0 +1,44 @@
+class Solution {
+public:
+
+    int maxHistogram(vector<int> &H) {
+        stack<int>S;
+        H.push_back(0);
+        int maxi = 0;
+        for(int i = 0 ; i<H.size() ; i++) {
+            if(S.empty() || H[i] >= H[S.top()] ) {
+                S.push(i);
+            } else {
+                int middle = S.top();
+                S.pop();
+                int left = (S.size() == 0) ? -1 : S.top();
+                maxi = max(maxi, (i-left-1) * H[middle] );
+                i--;
+            }
+        }
+        
+        return maxi;
+    }
+
+    int maximalRectangle(vector<vector<char>>& matrix) {
+        
+        int rows = matrix.size();
+        if(rows == 0)
+            return 0;
+        int cols = matrix[0].size();
+        
+        int maxi = 0;
+        vector<int>H(cols,0);
+        for(int i = 0 ; i< rows ; i++) {
+            for(int j = 0 ; j< cols ; j++) {
+                if(matrix[i][j] == '1') {
+                     ++H[j];
+                 } else {
+                    H[j] = 0;
+                }
+            }
+            maxi = max(maxi, maxHistogram(H));
+        }
+        return maxi;
+    }
+};
