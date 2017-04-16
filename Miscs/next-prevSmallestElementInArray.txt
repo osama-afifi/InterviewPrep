@@ -1,0 +1,53 @@
+class Solution {
+public:
+
+ 
+ void smallRight(const vector<int> &H, vector<int>&res) {
+    res.assign(H.size(),H.size());
+    stack<int>S;
+    for(int i = 0 ; i< H.size() ; i++) {
+        while(!S.empty() && H[i] < H[S.top()]) {
+            res[S.top()] = i;
+            S.pop();
+        }
+        S.push(i);
+    }
+ }
+ 
+  
+ void smallLeft(const vector<int> &H, vector<int>&res) {
+    res.assign(H.size(),-1);
+    stack<int>S;
+    for(int i = H.size()-1 ; i>=0 ; i--) {
+        while(!S.empty() && H[i] < H[S.top()]) {
+            res[S.top()] = i;
+            S.pop();
+        }
+        S.push(i);
+    }
+ }
+ 
+
+    int maximalRectangle(vector<vector<char>>& matrix) {
+        
+        int rows = matrix.size();
+        if(rows == 0) return 0;
+        int cols = matrix[0].size();
+        int x;
+        int maxi = 0;
+        vector<int>H(cols,0);
+        for(int i = 0 ; i< rows ; i++) {
+            for(int j = 0 ; j< cols ; j++) {
+                if(matrix[i][j] == '1') ++H[j];
+                else H[j] = 0;
+            }
+            vector<int>L,R;
+            smallLeft(H,L);
+            smallRight(H,R);
+            for(int j = 0 ; j< cols ; j++){
+                maxi = max(maxi, H[j]*(R[j]-L[j]-1));
+            }
+        }
+        return maxi;
+    }
+};
