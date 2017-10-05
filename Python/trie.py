@@ -1,7 +1,5 @@
 # author: Ahmed Hani
 
-alphabet_size = 26
-
 
 class Node:
     def __init__(self, char='root', parent=None):
