@@ -118,3 +118,13 @@ class HashTable:
 
 if __name__ == '__main__':
     hashtable = HashTable(5)
+
+    hashtable['ahmed'] = 1
+    hashtable['Hani'] = 2
+    hashtable['Ibrahim'] = 3
+    hashtable['ahmed'] = 4
+    hashtable['Alghidani'] = 5
+    hashtable['Ibrahim Ibrahim'] = 6
+
+    print(hashtable['Ibrahim'])
+    print(hashtable['Hani'])
